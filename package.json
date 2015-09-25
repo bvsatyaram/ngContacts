@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bvsatyaram/ngContacts/issues"
   },
-  "homepage": "https://github.com/bvsatyaram/ngContacts#readme"
+  "homepage": "https://github.com/bvsatyaram/ngContacts#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
