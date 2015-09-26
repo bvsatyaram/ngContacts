@@ -15,4 +15,26 @@ angular.module('ContactsApp')
     list.show = function(id) {
       $location.url('/contact/' + id)
     };
+  }])
+  .controller('NewController', ['Contact', '$location', function(Contact, $location){
+    new = this;
+    new.contact = new Contact({
+      firstName: ['', 'text'],
+      lastName:  ['', 'text'],
+      email:     ['', 'email'],
+      homePhone: ['', 'tel'],
+      cellPhone: ['', 'tel'],
+      birthday:  ['', 'date'],
+      website:   ['', 'url'],
+      address:   ['', 'text']
+    });
+
+    new.submit = function() {
+      if (new.contactForm.$invalid) {
+        new.$broadcast('record:invalid');
+      } else {
+        new.contact.$save();
+        $location.url('/contacts');
+      }
+    };
   }]);
