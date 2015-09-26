@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="contact in list.contacts | filter: list.query | orderBy: list.sortField : list.sortOrder">
+    <tr ng-click="list.show(contact.id)" ng-repeat="contact in list.contacts | filter: list.query | orderBy: list.sortField : list.sortOrder">
       <td ng-repeat="field in list.fields"> {{contact[field][0]}}</td>
     </tr>
   </tbody>
