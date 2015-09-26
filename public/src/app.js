@@ -1,1 +1,1 @@
-angular.module('ContactsApp', ['ngRoute', 'ngResource']);
+angular.module('ContactsApp', ['ngRoute', 'ngResource', 'ngMessages']);
