@@ -5,7 +5,7 @@
   <thead>
     <tr>
       <th ng-repeat="field in list.fields" ng-click="list.sort(field)">
-        {{field}}
+        {{field | labelCase}}
         <span ng-show='list.sortField === field && !list.sortOrder' class="glyphicon glyphicon-chevron-down"></span>
         <span ng-show='list.sortField === field && list.sortOrder' class="glyphicon glyphicon-chevron-up"></span>
       </th>
