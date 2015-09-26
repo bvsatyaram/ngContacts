@@ -1,0 +1,6 @@
+<div class="row form-group" ng-form={{field}} bg-class="{ 'has-error': {{field}}.$dirty && {{field}}.$invalid }">
+  <label class="col-sm-2 control-label">
+    {{ field | labelCase }}
+    <span ng-if='required'>*</span>
+  </label>
+</div>
