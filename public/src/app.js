@@ -1,4 +1,1 @@
-angular.module('ContactsApp', [])
-  .run(function($rootScope) {
-    $rootScope.message = "Hello Angular";
-  });
+angular.module('ContactsApp', ['ngRoute']);
