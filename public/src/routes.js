@@ -8,7 +8,7 @@ angular.module('ContactsApp')
       }).
       when('/contacts/new', {
         controller: "NewController",
-        controllerAs: "new",
+        controllerAs: "newContact",
         templateUrl: "views/new.tmpl.html"
       });
     $locationProvider.html5Mode(true);

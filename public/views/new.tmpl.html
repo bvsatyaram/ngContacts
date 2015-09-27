@@ -1,11 +1,12 @@
 <h2>New Contact</h2>
 
-<form name="new.contactForm" novalidate class="form-horizontal">
-  <form-field record="new.contact" field="firstName" live="false" required="true"></form-field>
+<form name="newContact.contactForm" novalidate class="form-horizontal">
+  <form-field record="newContact.contact" field="firstName" live="false" required="true"></form-field>
+  <form-field record="newContact.contact" field="lastName" live="false" required="true"></form-field>
 
   <div class="row form-group">
     <div class="col-sm-offset-2">
-      <button class="btn btn-primary" ng-click='new.submit()'>Create Contact</button>
+      <button class="btn btn-primary" ng-click='newContact.submit()'>Create Contact</button>
     </div>
   </div>
 </form>

@@ -17,8 +17,8 @@ angular.module('ContactsApp')
     };
   }])
   .controller('NewController', ['Contact', '$location', function(Contact, $location){
-    new = this;
-    new.contact = new Contact({
+    newContact = this;
+    newContact.contact = new Contact({
       firstName: ['', 'text'],
       lastName:  ['', 'text'],
       email:     ['', 'email'],
@@ -29,11 +29,11 @@ angular.module('ContactsApp')
       address:   ['', 'text']
     });
 
-    new.submit = function() {
-      if (new.contactForm.$invalid) {
-        new.$broadcast('record:invalid');
+    newContact.submit = function() {
+      if (newContact.contactForm.$invalid) {
+        newContact.$broadcast('record:invalid');
       } else {
-        new.contact.$save();
+        newContact.contact.$save();
         $location.url('/contacts');
       }
     };

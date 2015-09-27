@@ -1,5 +1,5 @@
 angular.module('ContactsApp')
-  .values('FieldTypes', {
+  .value('FieldTypes', {
     text:     ['Text',         'should be text'],
     email:    ['Email',        'should be an eamil address'],
     number:   ['Number',       'should be a number'],
