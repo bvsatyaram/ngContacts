@@ -16,7 +16,7 @@ angular.module('ContactsApp')
       $location.url('/contact/' + id)
     };
   }])
-  .controller('NewController', ['Contact', '$location', function(Contact, $location){
+  .controller('NewController', ['$scope', 'Contact', '$location', function($scope, Contact, $location){
     newContact = this;
     newContact.contact = new Contact({
       firstName: ['', 'text'],
@@ -31,7 +31,7 @@ angular.module('ContactsApp')
 
     newContact.submit = function() {
       if (newContact.contactForm.$invalid) {
-        newContact.$broadcast('record:invalid');
+        $scope.$broadcast('record:invalid');
       } else {
         newContact.contact.$save();
         $location.url('/contacts');

@@ -11,5 +11,5 @@ angular.module('ContactsApp')
         controllerAs: "newContact",
         templateUrl: "views/new.tmpl.html"
       });
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
   }]);
